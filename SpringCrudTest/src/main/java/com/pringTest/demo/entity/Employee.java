@@ -11,46 +11,56 @@ public class Employee {
    
     @Id
     @GeneratedValue
-	private int eid;
-	private String eName;
+	private int id;
+	private String name;
 	private String address;
 	private String email;
 	
 	
+	
 	public Employee() {
 		super();
-		
 	}
-	public Employee(String eName, String address, String email) {
+
+	public Employee(String name, String address, String email) {
 		super();
-		this.eName = eName;
+		this.name = name;
 		this.address = address;
 		this.email = email;
 	}
-	public int getEid() {
-		return eid;
+
+	
+
+	public int getId() {
+		return id;
 	}
-	public void setEid(int eid) {
-		this.eid = eid;
+
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String geteName() {
-		return eName;
+
+	public String getName() {
+		return name;
 	}
-	public void seteName(String eName) {
-		this.eName = eName;
+
+	public void setName(String name) {
+		this.name = name;
 	}
+
 	public String getAddress() {
 		return address;
 	}
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
 	
 }

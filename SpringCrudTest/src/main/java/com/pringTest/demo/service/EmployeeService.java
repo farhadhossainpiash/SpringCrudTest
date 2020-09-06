@@ -23,9 +23,10 @@ public class EmployeeService {
 	  return employeeRepository.saveAll(employees);
   }
   
-  public String deleteEmployee(int id) {
+  public void deleteEmployee(int id) {
+	 // after delete can not find the data by delete id
+	  // for this reason return void
 	  employeeRepository.deleteById(id);
-	  return "deleted id:" + id;
 	  }
   
   public Employee getEmployee(int id) {
@@ -39,8 +40,8 @@ public class EmployeeService {
   }
  
  public Employee updateEmployee (Employee employee) {
-	 Employee existingEmployee = employeeRepository.findById(employee.getEid()).orElse(null);
-	 existingEmployee.seteName(employee.geteName());
+	 Employee existingEmployee = employeeRepository.findById(employee.getId()).orElse(null);
+	 existingEmployee.setName(employee.getName());
 	 existingEmployee.setEmail(employee.getEmail());
 	 existingEmployee.setAddress(employee.getAddress());
 	
